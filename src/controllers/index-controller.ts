@@ -7,6 +7,7 @@ import {
 import { config } from "../config";
 import { LoginClient } from "../login/login-client";
 import { ControllDect200 } from "./controll-dect200";
+import {ControllDect500} from "./controll-dect500";
 
 /**
  * Controller for main index route. (Example only so far)
@@ -45,6 +46,19 @@ IndexController.get(
       .then((r) => res.status(200).send({ data: r.data }));
   },
 );
+
+IndexController.get (
+    "/api/v1/switch/500",
+    (req: Request, res: Response, next: NextFunction) => {
+        const controldect500 = new ControllDect500(
+            new LoginClient(config),
+            config,
+        );
+        controldect500
+            .onoff("13077 0150676-1")
+            .then((r) => res.status(200).send(  { data : r.data}))
+    }
+)
 
 IndexController.get(
   "/api/v1/collect/",

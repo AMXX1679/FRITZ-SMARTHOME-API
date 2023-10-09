@@ -12,17 +12,18 @@ export class ControllDect500 {
   private readonly homeAutoUrl: string;
 
   public onoff(ain: string): Promise<AxiosResponse<string>> {
-    return this.useActor(SwitchCommands500.ONOFF, ain);
+    return this.useActor(SwitchCommands500.ONOFF, ain, {onoff: 2});
   }
 
 
-  private async useActor(cmd: SwitchCommands500, ain: string) {
+  private async useActor(cmd: SwitchCommands500, ain: string, parms: {[key: string]:string|number} = {}) {
     const promise = await this.loginClient.getSessionId().then((id) =>
       axios.get(this.homeAutoUrl, {
         params: {
           ain: ain,
           cmd: cmd,
           sid: id,
+          ...parms
         },
       }),
     );

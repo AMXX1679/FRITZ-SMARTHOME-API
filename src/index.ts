@@ -1,5 +1,5 @@
-import { app } from './app';
-import * as process from 'process';
+import { app } from "./app";
+import * as process from "process";
 
 /**
  * App bootstrap
@@ -7,7 +7,7 @@ import * as process from 'process';
  
  */
 
-const port = process.env.PORT ?? 5000;
+const port = process.env.PORT ?? 8080;
 
 // Start server
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));

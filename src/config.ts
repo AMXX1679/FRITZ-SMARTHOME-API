@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-import * as process from 'process';
+import dotenv from "dotenv";
+import * as process from "process";
 
 /**
  * Application client config.
@@ -7,15 +7,15 @@ import * as process from 'process';
  
  */
 export interface Config {
-    boxUrl: string;
-    username: string;
-    password: string;
+  boxUrl: string;
+  username: string;
+  password: string;
 }
 
 dotenv.config();
 
 export const config: Config = {
-    boxUrl: process.env.FB_URL ?? '',
-    username: process.env.FB_USERNAME ?? '',
-    password: process.env.FB_PASSWORD ?? '',
+  boxUrl: process.env.FB_URL ?? "",
+  username: process.env.FB_USERNAME ?? "",
+  password: process.env.FB_PASSWORD ?? "",
 };

@@ -1,5 +1,5 @@
-import express, {type Application} from 'express';
-import {routes} from './routes';
+import express, { type Application } from "express";
+import { routes } from "./routes";
 
 /**
  * Build and configure Express app

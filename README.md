@@ -1,0 +1,2 @@
+AVM SMARTHOME API
+=================

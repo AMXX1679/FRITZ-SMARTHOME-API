@@ -166,3 +166,29 @@ IndexController.get (
             .then((r) => res.status(200).send(  { data : r}))
     }
 )
+
+IndexController.get (
+    "/api/500/info/level",
+    (req: Request, res: Response, next: NextFunction) => {
+        const controldect500 = new ControllDect500(
+            loginClient,
+            config,
+        );
+        controldect500
+            .infoLevel("13077 0150676-1")
+            .then((r) => res.status(200).send(  { data : r}))
+    }
+)
+
+IndexController.get (
+    "/api/500/info/state",
+    (req: Request, res: Response, next: NextFunction) => {
+        const controldect500 = new ControllDect500(
+            loginClient,
+            config,
+        );
+        controldect500
+            .infoState("13077 0150676-1")
+            .then((r) => res.status(200).send(  { data : r}))
+    }
+)

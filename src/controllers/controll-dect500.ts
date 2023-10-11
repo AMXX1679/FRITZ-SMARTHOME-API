@@ -19,9 +19,19 @@ export class ControllDect500 {
         return this.useActor(SwitchCommands500.ONOFF, ain, {onoff: 2});
     }
 
-    public info(ain: string): Promise<any> {
+    public infoLevel(ain: string): Promise<any> {
         return this.useActor(SwitchCommands500.INFO, ain)
             .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact).device.levelcontrol.levelpercentage._text)
+    }
+
+    public info(ain: string): Promise<any> {
+        return this.useActor(SwitchCommands500.INFO, ain)
+            .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact))
+    }
+
+    public infoState(ain: string): Promise<any> {
+        return this.useActor(SwitchCommands500.INFO, ain)
+            .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact).device.simpleonoff.state._text)
     }
 
     public randomLevel(ain: string): Promise<AxiosResponse<string>> {

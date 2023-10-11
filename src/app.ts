@@ -12,3 +12,5 @@ export const app: Application = express();
 
 // Application routing
 routes(app);
+
+app.use("/home", express.static("src/GUI/"))

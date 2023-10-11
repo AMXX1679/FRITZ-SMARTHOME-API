@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>AVM-API</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -15,7 +17,7 @@
     <input id="pi_input" type="range" min="0" max="100" step="any" class="slider"/>
     <h1>Level: <output id="value"></output></h1>
 
-    <button class="btn-class-name" onclick="onoff()">
+    <button class="btn-class-name">
         <span class="back"></span>
         <span class="front"></span>
     </button>
@@ -26,172 +28,8 @@
     <button class="green" onclick="green()"> GREEN</button>
     <button class="red" onclick="red()"> RED </button>
 
-    <script>
-        const value = document.querySelector("#value");
-        const input = document.querySelector("#pi_input");
-        value.textContent = input.value;
-        let timeoutid;
-        let obj;
-        const loadingScreen = document.getElementById("loading-screen");
-        const colorUrl = "http://localhost:8080/api/500/color/"
-        loadingScreen.style.display = "flex";
-
-        fetch('http://localhost:8080/api/500/info')
-            .then(res => res.json())
-            .then(data => {
-                obj = data;
-            })
-            .then(() => {
-                input.value = obj.data
-                value.textContent = input.value
-            })
-            .finally(() => {
-                setTimeout(() => {
-                    loadingScreen.style.display = "none";
-                }, 300);
-            });
-
-
-        input.addEventListener("input", (event) => {
-            value.textContent = Math.round(event.target.value)
-            window.clearTimeout(timeoutid)
-
-            timeoutid = setTimeout(() => fetch(`http://localhost:8080/api/500/level/${Math.round(event.target.value)}`), 250)
-            console.log(event.target.value)
-        });
-
-        let onoff = () => {
-            fetch("http://localhost:8080/api/500/switch")
-        }
-
-        let blue = () => {
-            fetch(`${colorUrl}blue`)
-        }
-
-        let green = () => {
-            fetch(`${colorUrl}green`)
-        }
-
-        let red = () => {
-            fetch(`${colorUrl}red`)
-        }
-
-    </script>
-
-    <style>
-        .red {
-            padding: 0.6em 1em;
-            border: 4px solid #fa725a;
-            transition: ease-in-out 0.3s;
-            background-color: transparent;
-            color: #fa725a;
-            font-weight: bolder;
-            font-size: 16px;
-        }
-
-        .red:hover {
-            transform: scale(1.2) rotate(10deg);
-            background-color: #fa725a;
-            color: white;
-        }
-
-        .green {
-            padding: 0.6em 1em;
-            border: 4px solid #008000;
-            transition: ease-in-out 0.3s;
-            background-color: transparent;
-            color: #008000;
-            font-weight: bolder;
-            font-size: 16px;
-        }
-
-        .green:hover {
-            transform: scale(1.2) rotate(10deg);
-            background-color: #0d730d;
-            color: white;
-        }
-
-        .blue {
-            padding: 0.6em 1em;
-            border: 4px solid #0000ff;
-            transition: ease-in-out 0.3s;
-            background-color: transparent;
-            color: #0000ff;
-            font-weight: bolder;
-            font-size: 16px;
-        }
-
-        .blue:hover {
-            transform: scale(1.2) rotate(10deg);
-            background-color: #1919e6;
-            color: white;
-        }
-
-        #loading-screen {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-        }
-
-        .btn-class-name {
-            --primary: 255, 90, 120;
-            --secondary: 150, 50, 60;
-            width: 60px;
-            height: 50px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            user-select: none;
-            touch-action: manipulation;
-            outline: 10px solid rgb(var(--primary), .5);
-            border-radius: 100%;
-            position: relative;
-            transition: .3s;
-        }
-
-        .btn-class-name .back {
-            background: rgb(var(--secondary));
-            border-radius: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .btn-class-name .front {
-            background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
-            box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
-            border-radius: 100%;
-            position: absolute;
-            border: 1px solid rgb(var(--secondary));
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: 600;
-            font-family: inherit;
-            transform: translateY(-15%);
-            transition: .15s;
-            color: rgb(var(--secondary));
-        }
-
-        .btn-class-name:active .front {
-            transform: translateY(0%);
-            box-shadow: 0 0;
-        }
-
-    </style>
+    <div class="bulbHolder">
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="light" id="myBulb"/>
+    </div>
 </body>
 </html>

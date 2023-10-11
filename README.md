@@ -10,3 +10,9 @@ FB_URL="your url"
 FB_USERNAME="your username"
 
 FB_PASSWORD="your password"
+
+after that need to use the command "nvm use"
+
+after that you can also start it with "npm run start"
+
+the UI to control the lamp can be found under "http://localhost:8080/api/home"

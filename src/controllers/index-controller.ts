@@ -16,6 +16,7 @@ import * as path from "path";
  *
  */
 export const IndexController: Router = Router();
+const loginClient: LoginClient = new LoginClient(config);
 
 IndexController.get("/", (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -28,11 +29,10 @@ IndexController.get("/", (req: Request, res: Response, next: NextFunction) => {
 IndexController.get(
   "/api/login-info/",
   (req: Request, res: Response, next: NextFunction) => {
-    const loginclient = new LoginClient(config);
     res.status(200).send({ data: String });
-    console.log(loginclient.getSessionId());
+    console.log(loginClient.getSessionId());
 
-    loginclient.getSessionId();
+    loginClient.getSessionId();
   },
 );
 
@@ -40,7 +40,7 @@ IndexController.get(
   "/api/200/switch",
   (req: Request, res: Response, next: NextFunction) => {
     const controlldect200 = new ControllDect200(
-      new LoginClient(config),
+        loginClient,
       config,
     );
     controlldect200
@@ -53,7 +53,7 @@ IndexController.get (
     "/api/500/switch",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -68,7 +68,7 @@ IndexController.get(
   "/api/200/collect/",
   (req: Request, res: Response, next: NextFunction) => {
     const controlldect200 = new ControllDect200(
-      new LoginClient(config),
+        loginClient,
       config,
     );
     controlldect200
@@ -81,7 +81,7 @@ IndexController.get (
     "/api/500/rlevel",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -94,7 +94,7 @@ IndexController.get (
     "/api/500/level/:value",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -107,7 +107,7 @@ IndexController.get (
     "/api/500/color/red",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -120,7 +120,7 @@ IndexController.get (
     "/api/500/color/blue",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -133,7 +133,7 @@ IndexController.get (
     "/api/500/color/green",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500
@@ -146,7 +146,7 @@ IndexController.get (
     "/api/home",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
 
@@ -158,7 +158,7 @@ IndexController.get (
     "/api/500/info",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
-            new LoginClient(config),
+            loginClient,
             config,
         );
         controldect500

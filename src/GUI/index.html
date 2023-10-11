@@ -5,6 +5,13 @@
     <title>AVM-API</title>
 </head>
 <body>
+
+    <div class="loader"></div>
+
+    <div id="loading-screen">
+        <h1>Loading...</h1>
+    </div>
+
     <input id="pi_input" type="range" min="0" max="100" step="any" class="slider"/>
     <h1>Level: <output id="value"></output></h1>
 
@@ -13,17 +20,12 @@
         <span class="front"></span>
     </button>
 
-    <div class="loader"></div>
-
-    <div id="loading-screen">
-        <h1>Loading...</h1>
-    </div>
-
     <p>ON/OFF</p>
 
     <button class="blue" onclick="blue()"> BLUE </button>
     <button class="green" onclick="green()"> GREEN</button>
     <button class="red" onclick="red()"> RED </button>
+
     <script>
         const value = document.querySelector("#value");
         const input = document.querySelector("#pi_input");
@@ -31,7 +33,7 @@
         let timeoutid;
         let obj;
         const loadingScreen = document.getElementById("loading-screen");
-
+        const colorUrl = "http://localhost:8080/api/500/color/"
         loadingScreen.style.display = "flex";
 
         fetch('http://localhost:8080/api/500/info')
@@ -63,21 +65,20 @@
         }
 
         let blue = () => {
-            fetch("http://localhost:8080/api/500/color/blue")
+            fetch(`${colorUrl}blue`)
         }
 
         let green = () => {
-            fetch("http://localhost:8080/api/500/color/green")
+            fetch(`${colorUrl}green`)
         }
 
         let red = () => {
-            fetch("http://localhost:8080/api/500/color/red")
+            fetch(`${colorUrl}red`)
         }
 
     </script>
 
     <style>
-
         .red {
             padding: 0.6em 1em;
             border: 4px solid #fa725a;

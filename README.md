@@ -17,8 +17,14 @@ first you have to create an .env file where you enter the USERNAME, PASSWORD and
 - FB_PASSWORD="your password"
 
 
-after that need to use the command "nvm use"
 
-after that you can start it with "npm run start"
+## Installation
+
+```bash
+  git clone https://github.com/AMXX1679/AVM-API.git
+  cd AVM-API
+  nvm use
+  npm run start
+```
 
 the UI to control the lamp can be found under "http://localhost:8080/api/home"

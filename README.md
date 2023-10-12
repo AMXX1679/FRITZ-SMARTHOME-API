@@ -6,7 +6,8 @@ what do you nedd:
   - a fritzbox
   - a dect 500 lamp
   - Internet
-  - 
+  - nodejs v18.18.0
+  - a Browser
 
 first you have to create an .env file where you enter the USERNAME, PASSWORD and the URL of the fritzbox
 

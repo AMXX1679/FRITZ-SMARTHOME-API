@@ -68,12 +68,12 @@
 
 ## Color Reference
 
-| Colors            | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
+| Colors            | HSV                                                                         |
+| ----------------- |-----------------------------------------------------------------------------|
 | RED | ![](https://via.placeholder.com/10/ff0000?text=+) hue: 358, saturation: 180 |
 | BLUE | ![](https://via.placeholder.com/10/00aaff?text=+) hue: 225, saturation: 204 |
 | GREEN | ![](https://via.placeholder.com/10/3fd800?text=+) hue: 120, saturation: 160 |
-| YELLOW| ![](https://via.placeholder.com/10/e8e400?text=+) hue: 52, saturation: 153 |
+| YELLOW| ![](https://via.placeholder.com/10/e8e400?text=+) hue: 52, saturation: 153  |
 
 ## Run Locally
 

@@ -18,12 +18,35 @@ first you have to create an .env file where you enter the USERNAME, PASSWORD and
 
 
 
-## Installation
+
+## Run Locally
+
+Clone the project
 
 ```bash
   git clone https://github.com/AMXX1679/AVM-API.git
+```
+
+Go to the project directory
+
+```bash
   cd AVM-API
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+Use nvm
+
+```bash
   nvm use
+```
+
+Start the server
+
+```bash
   npm run start
 ```
 

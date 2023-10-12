@@ -8,16 +8,6 @@ what do you nedd:
   - nodejs v18.18.0
   - a Browser
 
-first you have to create an .env file where you enter the USERNAME, PASSWORD and the URL of the fritzbox
-
-## it must look something like this
-
-- FB_URL="your url"
-- FB_USERNAME="your username"
-- FB_PASSWORD="your password"
-
-
-
 ## Run Locally
 
 Clone the project

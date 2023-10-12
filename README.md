@@ -6,8 +6,8 @@
 - a dect 500 lamp
 - Internet
 - nodejs v18.18.0
-- a Browser
-
+- FRITZ!OS 6.35
+  
 ## TOOLS
 
 | Tool | description |

@@ -61,8 +61,6 @@ IndexController.get (
             .then((r) => res.status(200).send(  { data : r.data}))
     }
 )
-//https://8.walle.avm.de/webservices/homeautoswitch.lua?switchcmd=setcolortemperature&sid=2fd8da771188b6e1&ain=13077%200150676-1&temperature=6500
-//https://8.walle.avm.de/webservices/homeautoswitch.lua?switchcmd=setcolortemperature&sid=0587be96566895b7&ain=113077%200150676-1&temperature=2700&duration=0
 
 IndexController.get(
   "/api/200/collect/",

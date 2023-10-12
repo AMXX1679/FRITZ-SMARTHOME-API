@@ -19,6 +19,6 @@ first you have to create an .env file where you enter the USERNAME, PASSWORD and
 
 after that need to use the command "nvm use"
 
-after that you can also start it with "npm run start"
+after that you can start it with "npm run start"
 
 the UI to control the lamp can be found under "http://localhost:8080/api/home"

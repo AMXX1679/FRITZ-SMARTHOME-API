@@ -18,11 +18,10 @@ let bulb = () => {
             const state = data;
             console.log(state)
 
-            if(state.data === "1" ) {
+            if (state.data === "1") {
                 image.src = "https://www.w3schools.com/js/pic_bulbon.gif"
                 console.log("state 1")
-            }
-            else {
+            } else {
                 image.src = "https://www.w3schools.com/js/pic_bulboff.gif"
                 console.log("state 2")
             }
@@ -115,7 +114,6 @@ fetch('http://localhost:8080/api/500/info/level')
             loadingScreen.style.display = "none";
         }, 100);
     });
-
 
 
 input.addEventListener("input", (event) => {

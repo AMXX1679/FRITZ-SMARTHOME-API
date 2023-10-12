@@ -60,6 +60,15 @@
 | :-------- | :------- | :-------------------------------- |
 | `login-info`      | `string` | **Required**. you get a new session id in the terminal) |
 
+## Color Reference
+
+| Colors            | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| RED | ![](https://via.placeholder.com/10/ff0000?text=+) hue: 358, saturation: 180 |
+| BLUE | ![](https://via.placeholder.com/10/00aaff?text=+) hue: 225, saturation: 204 |
+| GREEN | ![](https://via.placeholder.com/10/3fd800?text=+) hue: 120, saturation: 160 |
+| YELLOW| ![](https://via.placeholder.com/10/e8e400?text=+) hue: 52, saturation: 153 |
+
 ## Run Locally
 
 Clone the project
@@ -106,6 +115,3 @@ Start the server
 ```bash
   npm run start
 ```
-
-## the UI to control the lamp can be found under http://localhost:8080/api/home
-

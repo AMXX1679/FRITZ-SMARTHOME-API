@@ -18,7 +18,6 @@ first you have to create an .env file where you enter the USERNAME, PASSWORD and
 
 
 
-
 ## Run Locally
 
 Clone the project
@@ -31,6 +30,19 @@ Go to the project directory
 
 ```bash
   cd AVM-API
+```
+Create a .env file
+
+```bash
+  nano .env
+```
+Put this in to the env file 
+
+```env
+  FB_URL="your url"
+  FB_USERNAME="your username"
+  FB_PASSWORD="your password"
+
 ```
 
 Install dependencies
@@ -45,6 +57,10 @@ Use nvm
 ```
 
 Start the server
+
+```bash
+  npm run start
+```
 
 ```bash
   npm run start

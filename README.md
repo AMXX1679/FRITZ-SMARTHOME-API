@@ -33,16 +33,15 @@
   GET /api/500/info/${info}/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `info`      | `string` | **Required**. info of the lamp(state, level) |
+| Parameter | Type     | Description                                        |
+| :-------- | :------- |:---------------------------------------------------|
+| `info`      | `string` | **Required**. info of the lamp(state, level, info) |
 
 #### turn on off
 
 ```http
   GET /api/500/switch/
 ```
-
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `switch`      | `string` | **Required**. with the switch you can turn the lamp on or off |

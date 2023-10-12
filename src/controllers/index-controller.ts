@@ -154,7 +154,7 @@ IndexController.get (
 )
 
 IndexController.get (
-    "/api/500/info",
+    "/api/500/info/info",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
             loginClient,

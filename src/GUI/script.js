@@ -115,7 +115,6 @@ fetch('http://localhost:8080/api/500/info/level')
         }, 100);
     });
 
-
 input.addEventListener("input", (event) => {
     value.textContent = Math.round(event.target.value)
     window.clearTimeout(timeoutid)

@@ -8,6 +8,58 @@
 - nodejs v18.18.0
 - a Browser
 
+## API Reference
+
+#### change the color
+
+```http
+  GET /api/500/color/${color}/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `color` | `string` | **Required**. the color of the lamp(red, blue, green, yellow)|
+
+#### get infos abut the lamp
+
+```http
+  GET /api/500/info/${info}/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `info`      | `string` | **Required**. info of the lamp(state, level) |
+
+#### turn on off
+
+```http
+  GET /api/500/switch/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `switch`      | `string` | **Required**. with the switch you can turn the lamp on or off |
+
+#### go to the home page
+
+```http
+  GET /home/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `home`      | `string` | **Required**. on the home page you can controll the lamp |
+
+#### get infos abut the lamp
+
+```http
+  GET /api/login-info/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `login-info`      | `string` | **Required**. you get a new session id in the terminal) |
+
 ## Run Locally
 
 Clone the project

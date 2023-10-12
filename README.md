@@ -52,8 +52,4 @@ Start the server
   npm run start
 ```
 
-```bash
-  npm run start
-```
-
 the UI to control the lamp can be found under "http://localhost:8080/api/home"

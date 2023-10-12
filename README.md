@@ -58,7 +58,7 @@
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `login-info`      | `string` | **Required**. you get a new session id in the terminal) |
+| `login-info`      | `string` | **Required**. you get a new session ID in your terminal) |
 
 ## Color Reference
 

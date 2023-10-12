@@ -53,3 +53,4 @@ Start the server
 ```
 
 the UI to control the lamp can be found under "http://localhost:8080/api/home"
+-----------------------------------------------------------------------------

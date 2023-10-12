@@ -1,6 +1,13 @@
 AVM SMARTHOME API
 =================
 
+what do you nedd:
+----------------
+  - a fritzbox
+  - a dect 500 lamp
+  - Internet
+  - 
+
 first you have to create an .env file where you enter the USERNAME, PASSWORD and the URL of the fritzbox
 
 it must look something like this

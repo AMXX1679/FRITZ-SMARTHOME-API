@@ -143,14 +143,15 @@ IndexController.get (
 )
 
 IndexController.get (
-    "/api/home",
+    "/api/500/color/yellow",
     (req: Request, res: Response, next: NextFunction) => {
         const controldect500 = new ControllDect500(
             loginClient,
             config,
         );
-
-        res.sendFile(path.join("/home/arne/Schreibtisch/AVM-API/src/GUI/index.html"))
+        controldect500
+            .yellow("13077 0150676-1")
+            .then((r) => res.status(200).send(  { data : r.data}))
     }
 )
 

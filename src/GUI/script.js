@@ -7,6 +7,7 @@ let level;
 const loadingScreen = document.getElementById("loading-screen");
 const colorUrl = "http://localhost:8080/api/500/color/";
 loadingScreen.style.display = "flex";
+
 const image = document.getElementById('myBulb');
 
 let bulb = () => {
@@ -32,6 +33,72 @@ let bulb = () => {
             }, 100);
         });
 
+}
+
+function getCurrentDateTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+}
+
+document.getElementById('timeInput').value = getCurrentDateTime();
+
+function startCountdown() {
+
+    fetch('http://localhost:8080/api/500/info/state')
+        .then(res => res.json())
+        .then(data => {
+            const state = data;
+            console.log(state)
+
+            if (state.data === "1") {
+                console.log("state 1")
+            } else {
+                fetch("http://localhost:8080/api/500/switch")
+                console.log("state 2")
+            }
+        })
+
+    fetch("http://localhost:8080/api/500/color/red")
+
+
+    const inputElement = document.getElementById('timeInput');
+    const inputDate = new Date(inputElement.value);
+
+    const Startdate = new Date().getTime();
+
+    const difference = inputDate - Startdate;
+
+    let halfwayLogged = false;
+
+
+    const countdownInterval = setInterval(function () {
+        const Now = new Date().getTime();
+        const updatedDifference = inputDate - Now;
+
+
+        const minutes = Math.floor((updatedDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((updatedDifference % (1000 * 60)) / 1000);
+
+        console.log(`${minutes}:${seconds}`);
+
+
+        if (Now >= Startdate + difference / 2 && !halfwayLogged) {
+            fetch("http://localhost:8080/api/500/color/yellow")
+            halfwayLogged = true;
+        }
+
+
+        if (updatedDifference <= 0) {
+            fetch("http://localhost:8080/api/500/color/green")
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
 }
 
 fetch('http://localhost:8080/api/500/info/level')

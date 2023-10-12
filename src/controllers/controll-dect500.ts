@@ -54,6 +54,10 @@ export class ControllDect500 {
         return this.useActor(SwitchCommands500.COLOR, ain, {hue: 120}, {saturation: 160})
     }
 
+    public yellow(ain: string): Promise<AxiosResponse<string>> {
+        return this.useActor(SwitchCommands500.COLOR, ain, {hue: 52}, {saturation: 153})
+    }
+
     private async useActor(cmd: SwitchCommands500, ain: string,
                            param1: { [key: string]: string | number } = {},
                            param2: { [key: string]: string | number } = {},

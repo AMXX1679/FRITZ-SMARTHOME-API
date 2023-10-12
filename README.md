@@ -1,12 +1,12 @@
-AVM SMARTHOME API
-================
-what do you nedd:
-----------------
-  - a fritzbox
-  - a dect 500 lamp
-  - Internet
-  - nodejs v18.18.0
-  - a Browser
+# AVM SMARTHOME API
+
+## what do you nedd:
+
+- a fritzbox
+- a dect 500 lamp
+- Internet
+- nodejs v18.18.0
+- a Browser
 
 ## Run Locally
 
@@ -21,12 +21,14 @@ Go to the project directory
 ```bash
   cd AVM-API
 ```
+
 Create a .env file
 
 ```bash
   nano .env
 ```
-Put this in to the env file 
+
+Put this in to the env file
 
 ```env
   FB_URL="your url"
@@ -40,6 +42,7 @@ Install dependencies
 ```bash
   npm install
 ```
+
 Use nvm
 
 ```bash
@@ -52,5 +55,5 @@ Start the server
   npm run start
 ```
 
-the UI to control the lamp can be found under "http://localhost:8080/api/home"
------------------------------------------------------------------------------
+## the UI to control the lamp can be found under "http://localhost:8080/api/home"
+

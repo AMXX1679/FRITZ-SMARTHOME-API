@@ -8,7 +8,6 @@ import { config } from "../config";
 import { LoginClient } from "../login/login-client";
 import { ControllDect200 } from "./controll-dect200";
 import {ControllDect500} from "./controll-dect500";
-import * as path from "path";
 
 
 /**

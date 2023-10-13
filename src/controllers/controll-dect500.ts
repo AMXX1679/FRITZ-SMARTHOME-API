@@ -1,8 +1,7 @@
 import {LoginClient} from "../login/login-client";
 import axios, {AxiosResponse} from "axios";
 import {Config} from "../config";
-import {response} from "express";
-import xmlJs, {Element, ElementCompact, xml2js} from "xml-js";
+import xmlJs, {ElementCompact} from "xml-js";
 
 export enum SwitchCommands500 {
     COLOR = "setcolor",
@@ -19,17 +18,17 @@ export class ControllDect500 {
         return this.useActor(SwitchCommands500.ONOFF, ain, {onoff: 2});
     }
 
-    public infoLevel(ain: string): Promise<any> {
+    public infoLevel(ain: string): Promise<void> {
         return this.useActor(SwitchCommands500.INFO, ain)
             .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact).device.levelcontrol.levelpercentage._text)
     }
 
-    public info(ain: string): Promise<any> {
+    public info(ain: string): Promise<ElementCompact> {
         return this.useActor(SwitchCommands500.INFO, ain)
             .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact))
     }
 
-    public infoState(ain: string): Promise<any> {
+    public infoState(ain: string): Promise<void> {
         return this.useActor(SwitchCommands500.INFO, ain)
             .then(response => (xmlJs.xml2js(response.data, {compact: true}) as ElementCompact).device.simpleonoff.state._text)
     }

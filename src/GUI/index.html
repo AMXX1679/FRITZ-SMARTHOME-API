@@ -15,14 +15,14 @@
     </div>
 
     <input id="pi_input" type="range" min="0" max="100" step="any" class="slider"/>
-    <h1>Level: <output id="value"></output></h1>
+    <h1><label for="pi_input">Level: <output id="value"></output></label></h1>
 
-    <button class="onoff">
+    <button class="onoff" aria-describedby="button-on-off">
         <span class="back"></span>
         <span class="front"></span>
     </button>
 
-    <h4>ON/OFF</h4>
+    <h4 id="button-on-off">ON/OFF</h4>
 
     <button class="blue" > BLUE </button>
     <button class="green"> GREEN</button>
@@ -32,8 +32,8 @@
         <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="light" id="myBulb"/>
     </div>
 
-    <label for="timeInput"><h2>Countdown Time:</h2></label>
+    <h2><label for="timeInput">Countdown Time:</label></h2>
     <input type="datetime-local" id="timeInput" class="time"  value="">
-    <button onclick="startCountdown()">Start Countdown</button>
+    <button class="start">Start Countdown</button>
 </body>
 </html>

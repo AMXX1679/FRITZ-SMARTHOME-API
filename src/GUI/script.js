@@ -45,7 +45,8 @@
 
     document.getElementById('timeInput').value = getCurrentDateTime();
 
-    function startCountdown() {
+
+    document.querySelector(".start").addEventListener("click", function startCountdown() {
 
         fetch('/api/500/info/state')
             .then(res => res.json())
@@ -60,6 +61,7 @@
                     console.log("state 2")
                 }
             })
+
 
         fetch("/api/500/color/red")
 
@@ -94,7 +96,7 @@
                 clearInterval(countdownInterval);
             }
         }, 1000);
-    }
+    })
 
     fetch('/api/500/info/level')
         .then(res => res.json())

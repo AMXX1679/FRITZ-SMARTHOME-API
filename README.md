@@ -121,3 +121,5 @@ Start the server
 ```bash
   npm run start
 ```
+
+<img src="https://github.com/AMXX1679/AVM-FRITZ-SMARTHOME-API/blob/master/Bildschirmfoto%20vom%202023-10-13%2010-36-10.png?raw=true">

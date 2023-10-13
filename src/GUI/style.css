@@ -59,7 +59,7 @@
     font-size: 24px;
 }
 
-.btn-class-name {
+.onoff {
     --primary: 255, 90, 120;
     --secondary: 150, 50, 60;
     width: 60px;
@@ -75,7 +75,7 @@
     transition: .3s;
 }
 
-.btn-class-name .back {
+.onoff .back {
     background: rgb(var(--secondary));
     border-radius: 100%;
     position: absolute;
@@ -85,7 +85,7 @@
     height: 100%;
 }
 
-.btn-class-name .front {
+.onoff .front {
     background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
     box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
     border-radius: 100%;
@@ -106,7 +106,7 @@
     color: rgb(var(--secondary));
 }
 
-.btn-class-name:active .front {
+.onoff:active .front {
     transform: translateY(0%);
     box-shadow: 0 0;
 }

@@ -92,7 +92,7 @@ Go to the project directory
 Create a .env file
 
 ```bash
-  nano .env
+  nano .env or vim .env
 ```
 
 Put this in to the env file

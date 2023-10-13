@@ -3,7 +3,8 @@
 ## what do you nedd:
 
 - a fritzbox
-- a dect 500 lamp
+- a dect 500 
+- a dect 200
 - Internet
 - nodejs v18.18.0
 - FRITZ!OS 6.35

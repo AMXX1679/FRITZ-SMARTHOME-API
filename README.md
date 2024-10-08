@@ -7,7 +7,7 @@
 - a dect 200
 - Internet
 - nodejs v18.18.0
-- min(FRITZ!OS 6.35)
+- min FRITZ!OS 6.35
   
 ## TOOLS
 

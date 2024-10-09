@@ -34,7 +34,7 @@ To get started with the AVM SmartHome API, ensure you have the following:
 | Tool | Description |
 | --- | :--- |
 | <img src="https://www.qbssoftware.de/wp-content/uploads/2022/07/JetBrains-Intellij-IDEA.png" width="80" height="70"> | [IntelliJ IDEA](https://www.jetbrains.com/idea/) - Integrated Development Environment for developing and programming |
-| <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYrNVwxlBhUzwBd6H4YqdJckckasr4N6PjQw&s" width="80" height="70"> | [NODE JS]([https://www.jetbrains.com/idea/](https://nodejs.org/en)) - for run |
+| <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" width="80" height="70"> | [NODE JS]([https://www.jetbrains.com/idea/](https://nodejs.org/en)) - for run |
 
 ## API Reference
 

@@ -15,6 +15,8 @@ Welcome to the **AVM SmartHome API**! This API allows you to control and monitor
 - [Color Reference](#color-reference)
 - [Run Locally](#run-locally)
 - [Screenshot](#screenshot)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## What You Need
 
@@ -34,7 +36,7 @@ To get started with the AVM SmartHome API, ensure you have the following:
 | Tool | Description |
 | --- | :--- |
 | <img src="https://www.qbssoftware.de/wp-content/uploads/2022/07/JetBrains-Intellij-IDEA.png" width="80" height="70"> | [IntelliJ IDEA](https://www.jetbrains.com/idea/) - Integrated Development Environment for developing and programming |
-| <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" width="80" height="70"> | [NODE JS]([https://www.jetbrains.com/idea/](https://nodejs.org/en)) - for run |
+| <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" width="80" height="70"> | [Node.js](https://nodejs.org/en) - JavaScript runtime for running the API server |
 
 ## API Reference
 
@@ -181,6 +183,14 @@ Feel free to contribute or raise issues for any improvements!
 
 ---
 
-## License
+## Contributing
 
-[MIT](LICENSE)
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a Pull Request.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
